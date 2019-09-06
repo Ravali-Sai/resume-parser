@@ -17,7 +17,7 @@ import datetime
 from dateutil.relativedelta import relativedelta
 import PyPDF2
 import spacy
-nlp_dates = spacy.load("ModelNerV1")
+nlp_dates = spacy.load("Model")
 #nlp = spacy.load('en_core_web_sm')
 
 
@@ -337,7 +337,7 @@ def main():
 
     print('Start...')
     # Prepare the documents
-    documents_path = 'C:\\Users\\sairavali.s\\Desktop\\T1\\Data'
+    documents_path = '.\\Data'
     # Run pipeline
     df = cleaning_pipeline(documents_path)
     print('Processing...')
@@ -434,7 +434,7 @@ def main():
         df['experience_years'][index] = difference_years
 
     # Write results to CSV
-    df.to_csv('C:\\Users\\sairavali.s\\Desktop\\T1\\results.csv')
+    df.to_csv('.\\results.csv')
     print('Processing Complete...')
 
 
